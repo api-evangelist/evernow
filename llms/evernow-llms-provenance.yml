@@ -1,0 +1,6 @@
+generated: '2026-10-22'
+method: probed
+generator: harvest-llms.py
+source: https://www.evernow.com/llms.txt
+bytes: 2734
+note: saved verbatim; the provider's own document

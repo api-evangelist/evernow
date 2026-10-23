@@ -1,25 +1,82 @@
 aid: evernow
+
 name: Evernow
-description: 'Evernow is a company surfaced via the API Evangelist harvest backlog (source: vc-portfolio;
-  backed by nea) and added to the network as a stub for full-pipeline profiling.'
+
+image: https://cdn.prod.website-files.com/62039cc91acccd69bbc3274f/6234821b71fe6f2a89a8ec47_OG-min.webp
+
+description: 'Evernow provides expert menopause care, treatments, and prescription services through a telehealth platform. Users can access personalized medical guidance, hormone therapy, and symptom management online, supported by licensed clinicians. The service emphasizes evidence‑based approaches, privacy, and convenient digital access, aiming to improve quality of life for women navigating menopause. Evernow’s platform integrates scheduling, secure messaging, and prescription delivery, reflecting a modern, patient‑centered healthcare solution.'
+
 url: https://raw.githubusercontent.com/api-evangelist/evernow/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:vc-portfolio
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-22 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-22'
+
 modified: '2026-10-22'
+
 tags:
 - Company
-apis: []
+- Health
+- Menopause
+- Telehealth
+- Women's Health
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-x-backed-by:
-- nea
+
 common:
+- type: LLMsTxt
+  url: llms/evernow-llms.txt
+- type: Hosts
+  url: hosts/evernow-hosts.yml
+- type: Vendors
+  url: vendors/evernow-vendors.yml
+- type: TermsOfService
+  url: https://evernow.com/terms
+- type: Support
+  url: https://help.evernow.com/hc/en-us
+- type: PrivacyPolicy
+  url: https://evernow.com/privacy
+- type: Newsroom
+  url: https://www.evernow.com/press
+- type: Documentation
+  url: https://help.evernow.com/
+- type: DomainSecurity
+  url: security/evernow-domain-security.yml
 - type: Website
   url: https://www.evernow.com/
+
+apis: []
+
+x-backed-by:
+- nea
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-10-22'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes no developer documentation host and no machine-readable contract on its own domain
+  evidence:
+  - url: https://help.evernow.com/mcp
+    status: 401
+  - url: https://www.evernow.com/
+    status: 200
+x-enrichment:
+  date: '2026-10-22'
+  status: enriched
+  artifacts_added: 11
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
